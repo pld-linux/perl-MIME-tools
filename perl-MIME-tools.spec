@@ -3,7 +3,7 @@ Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
 Version:	5.410
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
