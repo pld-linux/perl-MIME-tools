@@ -5,23 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	MIME
 %define		pnam	tools
-Summary:	MIME::tools Perl module
-Summary(cs):	Modul MIME::tools pro Perl
-Summary(da):	Perlmodul MIME::tools
-Summary(de):	MIME::tools Perl Modul
-Summary(es):	Módulo de Perl MIME::tools
-Summary(fr):	Module Perl MIME::tools
-Summary(it):	Modulo di Perl MIME::tools
-Summary(ja):	MIME::tools Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	MIME::tools ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul MIME::tools
-Summary(pl):	Modu³ Perla MIME::tools
-Summary(pt):	Módulo de Perl MIME::tools
-Summary(pt_BR):	Módulo Perl MIME::tools
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl MIME::tools
-Summary(sv):	MIME::tools Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl MIME::tools
-Summary(zh_CN):	MIME::tools Perl Ä£¿é
+Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
+Summary(pl):	MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
 Version:	5.416
 Release:	1
@@ -43,11 +28,20 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# optional
+%define		_noautoreq	'perl(Convert::BinHex)'
+
 %description
-MIME::tools - modules for parsing (and creating!) MIME entities.
+MIME-tools is a collection of Perl5 MIME:: modules for parsing,
+decoding and generating single- or multipart (even nested
+multipart) MIME messages. (Yes, kids, that means you can send messages
+with attached GIF files).
 
 %description -l pl
-MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
+MIME::tools to zestaw modu³ów MIME:: dla Perla 5 do analizy,
+dekodowania oraz tworzenia jedno- i wieloczê¶ciowych (a nawet
+zagnie¿d¿onych wieloczê¶ciowych) wiadomo¶ci MIME (tak, to znaczy, ¿e
+mo¿na wysy³aæ wiadomo¶ci z do³±czonymi plikami GIF).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
