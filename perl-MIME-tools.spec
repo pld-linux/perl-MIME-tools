@@ -5,7 +5,7 @@ Summary:	MIME::tools perl module
 Summary(pl):	Modu³ perla MIME::tools
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	5
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
