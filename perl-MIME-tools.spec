@@ -14,8 +14,6 @@ BuildRequires:	perl >= 5.6
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-IO-stringy
-%requires_eq	perl
-Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
