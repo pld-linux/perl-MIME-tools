@@ -28,6 +28,7 @@ Release:	8a
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
+# Source0-md5:	e7cb1f8e146171103640e3a5516afb1a
 BuildRequires:	perl-devel >= 5.6.1
 %if %{!?_without_tests:1}%{?_without_tests:0}
 BuildRequires:	perl(File::Path) >= 1
