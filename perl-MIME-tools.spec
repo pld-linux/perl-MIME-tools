@@ -1,14 +1,33 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	MIME
 %define	pnam	tools
-Summary:	MIME::tools perl module
-Summary(pl):	Modu³ perla MIME::tools
+Summary:	MIME::tools Perl module
+Summary(cs):	Modul MIME::tools pro Perl
+Summary(da):	Perlmodul MIME::tools
+Summary(de):	MIME::tools Perl Modul
+Summary(es):	Módulo de Perl MIME::tools
+Summary(fr):	Module Perl MIME::tools
+Summary(it):	Modulo di Perl MIME::tools
+Summary(ja):	MIME::tools Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	MIME::tools ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul MIME::tools
+Summary(pl):	Modu³ Perla MIME::tools
+Summary(pt):	Módulo de Perl MIME::tools
+Summary(pt_BR):	Módulo Perl MIME::tools
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl MIME::tools
+Summary(sv):	MIME::tools Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl MIME::tools
+Summary(zh_CN):	MIME::tools Perl Ä£¿é
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	6
+Release:	7a
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
@@ -32,6 +51,7 @@ MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
 %build
 perl Makefile.PL
 %{__make}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
