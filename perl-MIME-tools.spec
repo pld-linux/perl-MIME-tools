@@ -27,7 +27,7 @@ Version:	5.411
 Release:	7a
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
 BuildRequires:	perl >= 5.6.1
 %if %{!?_without_tests:1}%{?_without_tests:0}
 BuildRequires:	perl(File::Path) >= 1
