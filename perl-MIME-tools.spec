@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	MIME
-%define	pnam	tools
+%define		pdir	MIME
+%define		pnam	tools
 Summary:	MIME::tools Perl module
 Summary(cs):	Modul MIME::tools pro Perl
 Summary(da):	Perlmodul MIME::tools
