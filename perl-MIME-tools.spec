@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	MIME
 %define	pnam	tools
-Summary:	MIME-tools perl module
-Summary(pl):	Modu³ perla MIME-tools
+Summary:	MIME::tools perl module
+Summary(pl):	Modu³ perla MIME::tools
 Name:		perl-MIME-tools
 Version:	5.411
 Release:	5
@@ -18,10 +18,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MIME-tools - modules for parsing (and creating!) MIME entities.
+MIME::tools - modules for parsing (and creating!) MIME entities.
 
 %description -l pl
-MIME-tools - zestaw modu³ów do operacji na danych w formacie MIME.
+MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
