@@ -3,13 +3,14 @@ Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
 Version:	5.408
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MIME/MIME-tools-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-IO-stringy
@@ -32,34 +33,23 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/MIME-tools
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv -f .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        README*
+gzip -9nf README*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README*.gz
-
+%doc *.gz
 %{perl_sitelib}/MIME/*.pm
 %{perl_sitelib}/MIME/Parser
 %{perl_sitelib}/MIME/Decoder
 %{perl_sitelib}/MIME/Field
-%{perl_sitearch}/auto/MIME-tools
-
 %{_mandir}/man3/*
-
-%{_prefix}/src/examples/%{name}
+%{_examplesdir}/%{name}-%{version}
