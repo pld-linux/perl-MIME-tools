@@ -25,7 +25,8 @@ Summary(zh_CN):	MIME::tools Perl Ä£¿é
 Name:		perl-MIME-tools
 Version:	5.411
 Release:	9
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
 # Source0-md5:	e7cb1f8e146171103640e3a5516afb1a
