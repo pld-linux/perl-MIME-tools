@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl MIME::tools
 Summary(zh_CN):	MIME::tools Perl дё©И
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	7a
+Release:	8a
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
@@ -37,7 +37,7 @@ BuildRequires:	perl-MIME-Base64 >= 2.04
 BuildRequires:	perl(MIME::QuotedPrint) >= 2.03
 BuildRequires:	perl-IO-stringy >= 1.211
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.0.2-104
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
