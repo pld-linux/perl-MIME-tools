@@ -23,13 +23,13 @@ Summary(sv):	MIME::tools Perlmodul
 Summary(uk):	Модуль для Perl MIME::tools
 Summary(zh_CN):	MIME::tools Perl дё©И
 Name:		perl-MIME-tools
-Version:	5.411
-Release:	10
+Version:	5.416
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
-# Source0-md5:	e7cb1f8e146171103640e3a5516afb1a
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	95a2eb01ecd5f7b6710f5b3351766140
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl(File::Path) >= 1
