@@ -28,7 +28,7 @@ MIME-tools - zestaw modu³ów do operacji na danych w formacie MIME.
 
 %build
 perl Makefile.PL
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
