@@ -24,7 +24,7 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl MIME::tools
 Summary(zh_CN):	MIME::tools Perl Ä£¿é
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	7a
+Release:	8a
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
@@ -37,7 +37,7 @@ BuildRequires:	perl-MIME-Base64 >= 2.04
 BuildRequires:	perl(MIME::QuotedPrint) >= 2.03
 BuildRequires:	perl-IO-stringy >= 1.211
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-18
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,7 +51,8 @@ MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -69,9 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README*
-%{perl_sitelib}/MIME/*.pm
-%{perl_sitelib}/MIME/Parser
-%{perl_sitelib}/MIME/Decoder
-%{perl_sitelib}/MIME/Field
+%{perl_vendorlib}/MIME/*.pm
+%{perl_vendorlib}/MIME/Parser
+%{perl_vendorlib}/MIME/Decoder
+%{perl_vendorlib}/MIME/Field
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
