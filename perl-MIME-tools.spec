@@ -29,12 +29,14 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
 BuildRequires:	perl >= 5.6.1
+%if %{!?_without_tests:1}%{?_without_tests:0}
 BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
 BuildRequires:	perl-MailTools >= 1.05
 BuildRequires:	perl-MIME-Base64 >= 2.04
 BuildRequires:	perl(MIME::QuotedPrint) >= 2.03
 BuildRequires:	perl-IO-stringy >= 1.211
+%endif
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
