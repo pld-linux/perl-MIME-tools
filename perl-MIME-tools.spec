@@ -9,7 +9,7 @@ Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
 Summary(pl):	MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
 Version:	5.416
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
