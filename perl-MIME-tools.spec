@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
@@ -8,15 +8,13 @@ Copyright:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module//MIME-tools-%{version}.tar.gz
-BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-IO-stringy
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-Requires:	perl-MailTools
-Requires:	perl-MIME-Base64
-Requires:	perl-IO-stringy
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
