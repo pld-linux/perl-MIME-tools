@@ -53,7 +53,7 @@ MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 %{!?_without_tests:%{__make} test}
 
