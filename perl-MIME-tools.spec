@@ -55,6 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README*.gz
 
 %{perl_sitelib}/MIME/*.pm
+%{perl_sitelib}/MIME/Parser
 %{perl_sitelib}/MIME/Decoder
 %{perl_sitelib}/MIME/Field
 %{perl_sitearch}/auto/MIME-tools
