@@ -14,7 +14,7 @@ Summary(fr):	Module Perl MIME::tools
 Summary(it):	Modulo di Perl MIME::tools
 Summary(ja):	MIME::tools Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	MIME::tools ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul MIME::tools
+Summary(nb):	Perlmodul MIME::tools
 Summary(pl):	Modu³ Perla MIME::tools
 Summary(pt):	Módulo de Perl MIME::tools
 Summary(pt_BR):	Módulo Perl MIME::tools
