@@ -24,7 +24,7 @@ Summary(uk):	Модуль для Perl MIME::tools
 Summary(zh_CN):	MIME::tools Perl дё©И
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	9
+Release:	10
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
