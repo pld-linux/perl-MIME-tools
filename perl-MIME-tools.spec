@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	MIME
@@ -30,7 +30,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}a.tar.gz
 # Source0-md5:	e7cb1f8e146171103640e3a5516afb1a
 BuildRequires:	perl-devel >= 5.6.1
-%if %{!?_without_tests:1}%{?_without_tests:0}
+%if %{with tests}
 BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
 BuildRequires:	perl-MailTools >= 1.05
@@ -55,7 +55,8 @@ MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
