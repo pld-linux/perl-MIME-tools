@@ -3,14 +3,14 @@ Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
 Version:	5.411
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MIME/MIME-tools-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl >= 5.6.1
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-IO-stringy
