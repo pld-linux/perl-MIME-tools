@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/MIME/MIME-tools-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/MIME/MIME-tools-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-MailTools
@@ -32,11 +32,11 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/MIME-tools
@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}
+%{_prefix}/src/examples/%{name}
