@@ -2,13 +2,13 @@
 Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
-Version:	4.122
-Release:	3
-Copyright:	GPL
+Version:	4.124
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module//MIME-tools-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/MIME/MIME-tools-%{version}.tar.gz
+BuildRequires:	rpm-perlprov >= 3.0.3-18
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-MailTools
 BuildRequires:	perl-MIME-Base64
@@ -32,11 +32,11 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/MIME-tools
@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}-%{version}
+/usr/src/examples/%{name}
