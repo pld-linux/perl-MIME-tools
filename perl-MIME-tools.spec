@@ -2,7 +2,7 @@
 Summary:	MIME-tools perl module
 Summary(pl):	Modu³ perla MIME-tools
 Name:		perl-MIME-tools
-Version:	4.124
+Version:	5.311
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -41,7 +41,7 @@ install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/MIME-tools
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
