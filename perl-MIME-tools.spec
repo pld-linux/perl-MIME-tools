@@ -15,7 +15,7 @@ BuildRequires:	perl-MIME-Base64
 BuildRequires:	perl-IO-stringy
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 MIME-tools - modules for parsing (and creating!) MIME entities.
