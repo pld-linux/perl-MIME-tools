@@ -8,20 +8,19 @@
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
 Summary(pl):	MIME::tools - zestaw modu³ów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
-Version:	5.416
-Release:	2
+Version:	5.417
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	95a2eb01ecd5f7b6710f5b3351766140
+# Source0-md5:	a92299db8729f0f7886ada6e3539b265
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
 BuildRequires:	perl-MailTools >= 1.05
-BuildRequires:	perl-MIME-Base64 >= 2.04
-BuildRequires:	perl(MIME::QuotedPrint) >= 2.03
+BuildRequires:	perl-MIME-Base64 >= 2.20
 BuildRequires:	perl-IO-stringy >= 1.211
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
