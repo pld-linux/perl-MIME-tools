@@ -6,7 +6,7 @@
 %define		pdir	MIME
 %define		pnam	tools
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
-Summary(pl):	MIME::tools - zestaw modu≥Ûw do operacji na danych w formacie MIME
+Summary(pl.UTF-8):   MIME::tools - zestaw modu≈Ç√≥w do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
 Version:	5.420
 Release:	1
@@ -36,11 +36,11 @@ decoding and generating single- or multipart (even nested multipart)
 MIME messages. (Yes, kids, that means you can send messages with
 attached GIF files).
 
-%description -l pl
-MIME::tools to zestaw modu≥Ûw MIME:: dla Perla 5 do analizy,
-dekodowania oraz tworzenia jedno- i wieloczÍ∂ciowych (a nawet
-zagnieødøonych wieloczÍ∂ciowych) wiadomo∂ci MIME (tak, to znaczy, øe
-moøna wysy≥aÊ wiadomo∂ci z do≥±czonymi plikami GIF).
+%description -l pl.UTF-8
+MIME::tools to zestaw modu≈Ç√≥w MIME:: dla Perla 5 do analizy,
+dekodowania oraz tworzenia jedno- i wieloczƒô≈õciowych (a nawet
+zagnie≈ºd≈ºonych wieloczƒô≈õciowych) wiadomo≈õci MIME (tak, to znaczy, ≈ºe
+mo≈ºna wysy≈Çaƒá wiadomo≈õci z do≈ÇƒÖczonymi plikami GIF).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
