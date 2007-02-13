@@ -6,7 +6,7 @@
 %define		pdir	MIME
 %define		pnam	tools
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
-Summary(pl.UTF-8):   MIME::tools - zestaw modułów do operacji na danych w formacie MIME
+Summary(pl.UTF-8):	MIME::tools - zestaw modułów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
 Version:	5.420
 Release:	1
