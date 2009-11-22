@@ -21,7 +21,7 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
 BuildRequires:	perl-File-Temp >= 0.18
-BuildRequires:	perl-IO-stringy >= 1.211
+BuildRequires:	perl-IO-stringy >= 2.110
 BuildRequires:	perl-MIME-Base64 >= 2.20
 BuildRequires:	perl-MailTools >= 1.05
 %endif
