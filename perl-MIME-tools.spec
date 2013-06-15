@@ -8,13 +8,13 @@
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
 Summary(pl.UTF-8):	MIME::tools - zestaw modułów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
-Version:	5.502
+Version:	5.504
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6a87adda74867e3f8868a0599137bde0
+# Source0-md5:	8e055aab88552710377b4727b23bfb70
 URL:		http://search.cpan.org/dist/MIME-tools/
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
@@ -22,18 +22,18 @@ BuildRequires:	perl(File::Path) >= 1
 BuildRequires:	perl(File::Spec) >= 0.6
 BuildRequires:	perl(IO::File) >= 1.13
 BuildRequires:	perl-File-Temp >= 0.18
-BuildRequires:	perl-IO-stringy >= 2.110
 BuildRequires:	perl-MIME-Base64 >= 2.20
 BuildRequires:	perl-MailTools >= 1.05
 BuildRequires:	perl-Test-Deep
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.663
 Requires:	perl-MailTools >= 1.05
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # optional
-%define		_noautoreq	'perl(Convert::BinHex)'
+%define		_noautoreq_perl	Convert::BinHex
 
 %description
 MIME-tools is a collection of Perl5 MIME:: modules for parsing,
@@ -73,9 +73,24 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README*
-%{perl_vendorlib}/MIME/*.pm
-%{perl_vendorlib}/MIME/Parser
+%{perl_vendorlib}/MIME/Body.pm
+%{perl_vendorlib}/MIME/Decoder.pm
+%{perl_vendorlib}/MIME/Entity.pm
+%{perl_vendorlib}/MIME/Head.pm
+%{perl_vendorlib}/MIME/Parser.pm
+%{perl_vendorlib}/MIME/Tools.pm
+%{perl_vendorlib}/MIME/WordDecoder.pm
+%{perl_vendorlib}/MIME/Words.pm
 %{perl_vendorlib}/MIME/Decoder
 %{perl_vendorlib}/MIME/Field
-%{_mandir}/man3/*
+%{perl_vendorlib}/MIME/Parser
+%{_mandir}/man3/MIME::Body.3pm*
+%{_mandir}/man3/MIME::Decoder*.3pm*
+%{_mandir}/man3/MIME::Entity.3pm*
+%{_mandir}/man3/MIME::Field::*.3pm*
+%{_mandir}/man3/MIME::Head.3pm*
+%{_mandir}/man3/MIME::Parser*.3pm*
+%{_mandir}/man3/MIME::Tools.3pm*
+%{_mandir}/man3/MIME::WordDecoder.3pm*
+%{_mandir}/man3/MIME::Words.3pm*
 %{_examplesdir}/%{name}-%{version}
