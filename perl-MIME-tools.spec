@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	MIME
 %define		pnam	tools
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
