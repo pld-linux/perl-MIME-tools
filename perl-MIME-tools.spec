@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	MIME
 %define		pnam	tools
@@ -14,7 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5f79177746057c8254246f4401ae2411
-URL:		http://search.cpan.org/dist/MIME-tools/
+URL:		https://metacpan.org/dist/MIME-tools
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl(File::Path) >= 1
@@ -26,7 +26,7 @@ BuildRequires:	perl-MailTools >= 1.05
 BuildRequires:	perl-Test-Deep
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	rpmbuild(macros) >= 1.663
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-MailTools >= 1.05
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
