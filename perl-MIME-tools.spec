@@ -7,13 +7,13 @@
 Summary:	MIME::tools - modules for parsing (and creating!) MIME entities
 Summary(pl.UTF-8):	MIME::tools - zestaw modułów do operacji na danych w formacie MIME
 Name:		perl-MIME-tools
-Version:	5.515
+Version:	5.517
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	dbc3c9f982498c35d8a103af17c5b5c9
+# Source0-md5:	62545bffc58694e5fd51348109ef7c18
 URL:		https://metacpan.org/dist/MIME-tools
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
@@ -64,7 +64,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 	DESTDIR=$RPM_BUILD_ROOT
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/MIME-tools/.packlist
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/auto/MIME/Tools/.packlist
 
 %clean
 rm -rf $RPM_BUILD_ROOT
