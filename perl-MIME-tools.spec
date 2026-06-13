@@ -12,7 +12,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/MIME/DSKOLL/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	62545bffc58694e5fd51348109ef7c18
 URL:		https://metacpan.org/dist/MIME-tools
 BuildRequires:	perl-devel >= 1:5.8.0
